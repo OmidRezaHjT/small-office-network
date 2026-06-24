@@ -1,0 +1,20 @@
+en
+conf t
+hostname SW1
+line console 0
+logging synchronous
+int g0/1
+switchport mode access
+switchport nonegotiate
+switchport access vlan 10
+spanning-tree portfast
+int g0/2
+switchport mode access
+switchport nonegotiate
+switchport access vlan 20
+spanning-tree portfast
+int g0/0
+switchport trunk encapsulation dot1q
+switchport mode Trunk
+switchport nonegotiate
+DO WR
